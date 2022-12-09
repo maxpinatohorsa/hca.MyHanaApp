@@ -11,5 +11,22 @@ module.exports = cds.service.impl(function () {
         console.error(error)
         return false
     }
-    })
+    }),
+    this.on('testSomething', async () => {
+        try {
+            let dbQuery = ' Call "testSomething"( )'
+            //let dbQuery = 'select 1 from dummy;';
+            console.log('TEST LANCIO DI testSomething')
+            console.log('dbQuery: ')
+            console.log(dbQuery)
+            console.log('Ora lancio in effettivo ...')
+            let result = await cds.run(dbQuery, { })
+            console.log('Completato. Ora mostro il risultato')
+            console.log(result)
+            return true
+        } catch (error) {
+            console.error(error)
+            return false
+        }
+        })
 })

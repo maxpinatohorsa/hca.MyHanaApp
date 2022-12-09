@@ -7,6 +7,10 @@ service CatalogService {
 		
 	entity Interactions_Items as projection 
 		on interactions.Interactions_Items; 
+
+	entity Table_Test as projection 
+		on interactions.Table_Test; 		
 		
 	function sleep()  returns Boolean;
+	function testSomething() returns Boolean;
 }

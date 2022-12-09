@@ -22,3 +22,8 @@ entity Interactions_Items {
         LOGTEXT : LText;
 };
 
+entity Table_Test{
+  key TIME_STAMP : SDate;
+  SOME_TEXT : String(200);
+}
+

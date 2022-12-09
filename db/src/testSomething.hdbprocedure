@@ -1,0 +1,13 @@
+PROCEDURE "testSomething" ( )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+    AS
+BEGIN 
+
+    insert into "APP_INTERACTIONS_TABLE_TEST" values (
+        current_timestamp,
+        'Eccoci qua ... anvedi ancora'
+    );
+    commit;
+
+END
